@@ -1,0 +1,3 @@
+rootProject.name = 'scavengr_react_native'
+
+include ':app'
