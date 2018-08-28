@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import HomeContainer from '../../containers/HomeContainer'
 import CurrentHuntsContainer from '../../containers/CurrentHuntsContainer'
+import MyHuntsContainer from '../../containers/MyHuntsContainer'
 
 const MainNavigator = createStackNavigator(
   {
@@ -11,7 +12,10 @@ const MainNavigator = createStackNavigator(
     },
     CurrentHunts: {
       screen: CurrentHuntsContainer,
-    }
+    },
+    MyHunts: {
+      screen: MyHuntsContainer,
+    },
   },
   {
     initialRouteName: 'Home',

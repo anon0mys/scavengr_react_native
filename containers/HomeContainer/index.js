@@ -10,6 +10,12 @@ export default class HomeContainer extends Component<Props> {
       <View style={styles.container}>
         <Text style={styles.welcome}>Home Container</Text>
         <Button
+          title="My Scavenger Hunts"
+          onPress={() =>
+            this.props.navigation.navigate('MyHunts')
+          }
+        />
+        <Button
           title="Current Scavenger Hunts"
           onPress={() =>
             this.props.navigation.navigate('CurrentHunts')
