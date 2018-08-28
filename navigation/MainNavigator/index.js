@@ -1,16 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import HomeContainer from '../../containers/HomeContainer'
+import CurrentHuntsContainer from '../../containers/CurrentHuntsContainer'
 
-export default createStackNavigator(
+const MainNavigator = createStackNavigator(
   {
     Home: {
-      screen: HomeContainer
+      screen: HomeContainer,
     },
+    CurrentHunts: {
+      screen: CurrentHuntsContainer,
+    }
   },
   {
     initialRouteName: 'Home',
   }
 )
+
+export default MainNavigator;

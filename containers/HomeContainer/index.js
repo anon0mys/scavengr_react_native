@@ -1,21 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+
+import Navigator from '../../navigation/MainNavigator'
 
 type Props = {};
 export default class HomeContainer extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Navigator />
-        <Text style={styles.welcome}>Scavengr</Text>
+        <Text style={styles.welcome}>Home Container</Text>
       </View>
     );
   }
