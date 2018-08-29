@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 import HomeContainer from '../../containers/HomeContainer'
 import CurrentHuntsContainer from '../../containers/CurrentHuntsContainer'
 import MyHuntsContainer from '../../containers/MyHuntsContainer'
+import CreateHuntContainer from '../../containers/CreateHuntContainer'
 
 const MainNavigator = createStackNavigator(
   {
@@ -15,6 +16,9 @@ const MainNavigator = createStackNavigator(
     },
     MyHunts: {
       screen: MyHuntsContainer,
+    },
+    CreateHunt: {
+      screen: CreateHuntContainer,
     },
   },
   {

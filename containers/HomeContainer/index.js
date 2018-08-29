@@ -16,6 +16,12 @@ export default class HomeContainer extends Component<Props> {
           }
         />
         <Button
+          title="Create a Scavenger Hunt"
+          onPress={() =>
+            this.props.navigation.navigate('CreateHunt')
+          }
+        />
+        <Button
           title="Current Scavenger Hunts"
           onPress={() =>
             this.props.navigation.navigate('CurrentHunts')
