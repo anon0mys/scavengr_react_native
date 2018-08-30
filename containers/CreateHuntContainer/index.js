@@ -6,8 +6,8 @@ export default class CreateHuntContainer extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'none',
-      description: 'none',
+      title: null,
+      description: null,
     }
   }
 
