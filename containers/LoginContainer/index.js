@@ -11,8 +11,23 @@ export default class LoginContainer extends Component<Props> {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.username != null) {
+      this.props.navigation.navigate('Home')
+    }
+  }
+
   _onButtonPress = () => {
-    return 'things'
+    //make api call to backend
+    //save info to store
+  }
+
+  _onChangeUsername = (text) => {
+    this.setState({username: text});
+  }
+
+  _onChangePassword = (text) => {
+    this.setState({password: text});
   }
 
   render() {
@@ -22,15 +37,13 @@ export default class LoginContainer extends Component<Props> {
         <View style={styles.form}>
           <TextInput
             style={styles.usernameInput}
-            value={this.state.username}
-            onChange={this._onUsernameTextChanged}
+            onChange={text => this._onChangeUsername(text)}
             placeholder='Username'
           />
           <TextInput
             style={styles.passwordInput}
             secureTextEntry={true}
-            value={this.state.password}
-            onChange={this._onPasswordTextChanged}
+            onChange={text => this._onChangePassword(text)}
             placeholder='Password'
           />
           <Button
