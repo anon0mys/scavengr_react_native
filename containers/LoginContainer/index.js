@@ -19,6 +19,14 @@ export default class LoginContainer extends Component<Props> {
 
   _onButtonPress = () => {
     //make api call to backend
+    fetch('https://scavengr-django.herokuapp.com/api/v1/users/', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: `{ "username": ${this.state.username}, "email": ${this.state.email}, "password": ${this.state.password} }`
+    })
+    .then()
     //save info to store
   }
 
